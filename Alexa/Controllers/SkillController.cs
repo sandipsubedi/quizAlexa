@@ -224,7 +224,7 @@ namespace Alexa.Controllers
 
             using (WebClient wc = new WebClient())
             {
-                var mainURL = "https://quizcollections.com/api/question/" + topic;
+                var mainURL = "https://quizcollections.com/api/question/" + topic.ToLower();
                 var json = wc.DownloadString(mainURL);
 
                 System.Diagnostics.Debug.Print("json was: ------");
